@@ -1,0 +1,83 @@
+/* Simple reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Page base */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+/* Anfield background only on home page */
+.home-page {
+  background-image: url('images/anfield.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+/* Header */ 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: rgba(0,0,0,0.6);
+}
+.brand { display: flex; align-items: center; text-decoration: none; color: #fff; }
+.logo { width: 36px; height: 36px; object-fit: cover; margin-right: 8px; border-radius: 4px; }
+.site-name { font-weight: bold; color: #fff; }
+
+/* Navigation */
+.nav { list-style: none; display: flex; gap: 10px; }
+.nav a { color: #b4abab; text-decoration: none; padding: 6px 8px; border-radius: 4px; }
+.nav a.active, .nav a:hover { background: rgba(255,255,255,0.15); }
+
+/* Main content spacing */
+main { max-width: 900px; margin: 24px auto; padding: 0 16px; background: rgba(229, 10, 10, 0.9); border-radius: 6px; }
+
+/* Links images on home */
+.links { display: flex; gap: 12px; margin-top: 12px; }
+.links img { width: 160px; height: 100px; object-fit: cover; display: block; border-radius: 6px; }
+
+/* Simple grid for players */
+.grid { display: flex; gap: 12px; margin-top: 12px; }
+.card { background: #fff; padding: 8px; border-radius: 6px; width: 200px; text-align: center; }
+.card img { width: 100%; height: 120px; object-fit: cover; border-radius: 4px; }
+
+/* Footer */
+footer { text-align: center; padding: 12px 0; margin-top: 12px; font-size: 13px; color: #333; }
+
+/* Small screens */
+@media (max-width: 600px) {
+  .nav { display: none; }
+  .links { flex-direction: column; align-items: center; }
+  .grid { flex-direction: column; align-items: center; }
+  main { background: rgba(255,255,255,0.95); margin: 12px; }
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+footer {
+  background: #f00000;
+  color: rgb(156, 105, 105);
+  text-align: center;
+  padding: 15px 0;
+}
+
+.footer-nav a {
+  color: rgb(4, 4, 4);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+.float-logo {
+  float: left;
+  width: 120px;
+  margin: 0 15px 10px 0;
+}
